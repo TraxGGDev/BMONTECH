@@ -2,12 +2,16 @@ import express from 'express';
 import cors from 'cors';   
 import mongoose from 'mongoose';    
 import dotenv from 'dotenv';
+import authRoute from '../backend/routes/authRoutes.js';
 dotenv.config();
 const app = express();
 
 //Middlewares
 app.use(cors());
 app.use(express.json());
+
+//rutas
+app.use('/api/auth', authRoute)
 
 
 //conexion a la base de datos
