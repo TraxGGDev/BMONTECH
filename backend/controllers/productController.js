@@ -1,5 +1,6 @@
 import Product from "../models/Product.js";
 
+//Cteat un producto nuevo
 export const createProduct = async (req, res) => {
     try{
     // 1. Obtener los datos del cuerpo de la petición
@@ -29,4 +30,27 @@ export const createProduct = async (req, res) => {
     catch(error){
           res.status(500).json({message:'Error al crear producto', error:error.message});
     }
-}
+};
+
+
+//Obtener todos los productos de la base de datos
+export const getAllProducts = async (req, res) => {
+    try{
+      // 1. Obtener todos los productos desde la base de datos
+        const allProducts = await Product.find();
+        if(!allProducts.length){
+            return res.status(404).json({success: false, message: "No products found"})
+        }
+        // 2. Enviar los productos como respuesta
+        res.status(200).json({
+            success: true,
+            count: allProducts.length,
+            products: allProducts
+        })
+
+    }
+    catch(error){
+      // 3. Manejo de errores
+      res.status(500).json({success: false, message: "Server Error"})
+    }
+};
