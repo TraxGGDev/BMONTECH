@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';    
 import dotenv from 'dotenv';
 import authRoute from '../backend/routes/authRoutes.js';
+import productRoute from '../backend/routes/productRoutes.js';
 dotenv.config();
 const app = express();
 
@@ -11,7 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 //rutas
-app.use('/api/auth', authRoute)
+app.use('/api/auth', authRoute);
+app.use('/api/products', productRoute);
 
 
 //conexion a la base de datos
