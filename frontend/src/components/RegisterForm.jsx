@@ -1,41 +1,67 @@
 const RegisterForm = () => {
   return (
-    <section>
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900">
-          <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />
-          BMONTECH
-        </a>
-        <div className="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
-          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-              Crear una cuenta
-            </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
-              <div>
-                <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900">Usuario</label>
-                <input type="text" name="username" id="username" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Usuario" required />
-              </div>
-              <div>
-                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Tu correo</label>
-                <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name@company.com" required />
-              </div>
-              <div>
-                <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Contraseña</label>
-                <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required />
-              </div>
-              
-              <button type="submit" class="w-full text-white bg-blue-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer">
-                Crear cuenta
-              </button>
-              <p className="text-sm font-light text-gray-500">
-                Ya tienes una cuenta? <a href="#" className="font-medium text-primary-600 hover:underline">Login here</a>
-              </p>
-            </form>
+    
+      <div className="bg-white flex rounded-2xl shadow-lg max-w-4xl p-6 sm:p-10 w-full">
+        
+        {/* Formulario */}
+        <div className="sm:w-1/2 w-full px-4 sm:px-8">
+          <h2 className="text-3xl font-bold text-slate-700">Crea tu cuenta</h2>
+
+          <form className="flex flex-col gap-4 mt-6">
+            <input
+              className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-slate-400"
+              type="text"
+              name="username"
+              placeholder="Nombre de usuario"
+            />
+            <input
+              className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-slate-400"
+              type="email"
+              name="email"
+              placeholder="Correo electrónico"
+            />
+            <input
+              className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-slate-400"
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+            />
+            <button
+              className="bg-slate-700 cursor-pointer hover:bg-slate-800 transition text-white py-3 rounded-xl font-medium"
+              type="submit"
+            >
+              Registrarse
+            </button>
+          </form>
+
+          <div className="mt-8 grid grid-cols-3 items-center text-gray-400">
+            <hr className="border-gray-300" />
+            <p className="text-center text-sm">O</p>
+            <hr className="border-gray-300" />
+          </div>
+
+          <button className=" cursor-pointer bg-white border border-gray-300 py-3 w-full rounded-xl mt-5 hover:bg-gray-50 transition">
+            Registrarse con Google
+          </button>
+
+          <div className="mt-4 text-xs flex justify-between items-center text-slate-500">
+            <p>¿Ya tienes una cuenta?</p>
+            <button className=" cursor-pointer py-2 px-4 bg-white border rounded-xl hover:bg-gray-100 transition text-sm">
+              Iniciar sesión
+            </button>
           </div>
         </div>
+
+        {/* Imagen */}
+        <div className="hidden sm:block w-1/2">
+          <img
+            className="rounded-2xl object-cover h-full"
+            src="/img/5230868.png"
+            alt="Imagen de registro"
+          />
+        </div>
       </div>
-    </section>
+    
   );
 };
 
