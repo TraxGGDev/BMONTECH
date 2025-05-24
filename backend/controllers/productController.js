@@ -80,3 +80,35 @@ export const getProductById = async (req, res) => {
       res.status(500).json({success: false, message: "Server Error"});
     }
 };
+
+//Actualizar producto
+export const updateProduct = async (req, res) => {
+    try{
+    // 1. Obtener el ID del producto desde los parámetros de la URL
+    const productId = req.params.id;
+
+    // 2. Obtener los datos actualizados desde el cuerpo de la petición
+    const productUpdated = req.body;
+
+    // 3. Buscar y actualizar el producto en la base de datos
+    const product = await Product.findByIdAndUpdate(productId, productUpdated, {new:true});
+
+    // 4. Si no se encuentra el producto, devolver un error 404
+    if(!product){
+        return res.status(404).json({
+            success: false, 
+            message: "No se encontró el producto con el ID proporcionado"
+        })
+    }
+
+    // 5. Devolver el producto actualizado como respuesta
+    res.status(200).json({
+        success:true,
+        product:product
+    })
+    }
+    catch(error){
+    // 6. Manejo de errores del servidor
+      res.status(500).json({success: false, message: "Server Error"});
+    }
+};
