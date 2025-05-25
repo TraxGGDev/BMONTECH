@@ -32,7 +32,6 @@ export const createProduct = async (req, res) => {
     }
 };
 
-
 //Obtener todos los productos de la base de datos
 export const getAllProducts = async (req, res) => {
     try{
@@ -110,5 +109,32 @@ export const updateProduct = async (req, res) => {
     catch(error){
     // 6. Manejo de errores del servidor
       res.status(500).json({success: false, message: "Server Error"});
+    }
+};
+
+//Eliminar producto
+export const deleteProduct = async (req, res) => {
+    try{
+    // 1. Obtener el ID del producto desde los parámetros de la URL
+    const productId = req.params.id;
+    // 2. Buscar el producto en la base de datos por ID
+    const product = await Product.findByIdAndDelete(productId);
+    // 3. Si no se encuentra, responder con error 404
+    if(!product){
+        return res.status(404).json({
+            success: false, 
+            message: "No se encontró el producto con el ID proporcionado"
+        });
+    }
+    // 5. Responder con mensaje de éxito
+    res.status(200).json({
+        success: true, 
+        message: "Producto eliminado"
+    })
+
+    }
+    catch(error){
+     // 6. Manejo de errores del servidor
+     res.status(500).json({success: false, message: "Server Error"});
     }
 };
