@@ -138,3 +138,38 @@ export const deleteProduct = async (req, res) => {
      res.status(500).json({success: false, message: "Server Error"});
     }
 };
+
+//Buscar productos
+export const searchProduct = async (req, res) => {
+    try{
+    // 1. Obtener el término de búsqueda desde req.query.query
+     const searchTerm = req.query.query;
+
+    // 3. Buscar en la base de datos usando expresiones regulares para hacer la búsqueda flexible (por ejemplo: por título o descripción)
+    const products = await Product.find({
+        $or:[
+            {title:{$regex:searchTerm, $options: 'i'}},
+            {description:{$regex:searchTerm, $options: 'i'}}
+        ]
+    });
+
+    // 4. Si no hay coincidencias, devolver un array vacío o mensaje informativo
+    if(products.length == 0){
+        return res.status(404).json({
+            success: false, 
+            message: "No se encontró ninguna coincidencia"
+        })
+    }
+
+    // 5. Enviar los resultados encontrados como respuesta
+    res.status(200).json({
+        success:true,
+        results:products
+    });
+
+    }
+    catch(error){
+    // 6. Manejo de errores del servidor
+      res.status(500).json({ success: false, message: "Error del servidor" });
+    }
+};
