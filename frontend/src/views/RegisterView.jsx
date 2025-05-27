@@ -3,8 +3,11 @@ import RegisterForm from "../components/RegisterForm";
 
 export default function RegisterView() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]">
-      <RegisterForm />
+   <div className=" h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+     <div className="flex justify-center items-center min-h-screen">
+        <RegisterForm />
+      </div>
     </div>
   );
 }
+
