@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <header className="w-full flex items-center justify-between bg-gray-100 h-20 px-10 shadow-md">
+    <header className="w-full flex items-center justify-between bg-[#004B49] h-20 px-10 shadow-md">
       {/* Nombre de la tienda o logo */}
-      <h1 className="text-3xl font-bold text-gray-700">BMONTECH</h1>
+      <h1 className="text-3xl font-bold text-white">BMONTECH</h1>
 
       {/* Barra de búsqueda */}
       <form className="w-full max-w-md">
