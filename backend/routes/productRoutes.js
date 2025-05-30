@@ -1,11 +1,12 @@
 import express from 'express'
 import { createProduct, getAllProducts, getProductById, updateProduct, deleteProduct, searchProduct} from '../controllers/productController.js';
+import { upload } from '../middlewares/uploadConfig.js';
 
 
 const router = express.Router();
 
 //crear producto nuevo
-router.post('/create', createProduct );
+router.post('/create', upload.single('image'), createProduct );
 //obtener todos los productos
 router.get('/', getAllProducts);
 //buscar producto
