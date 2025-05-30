@@ -4,7 +4,10 @@ import Product from "../models/Product.js";
 export const createProduct = async (req, res) => {
     try{
     // 1. Obtener los datos del cuerpo de la petición
-    const {title, description, price, image, stock, category} = req.body;
+    const {title, description, price, stock, category} = req.body;
+    
+    // Obtener el nombre del archivo de imagen
+    const image = req.file ? req.file.filename : '';
 
     // 2. Validar que los campos obligatorios estén presentes
     if(!title || !description || !price || !stock){
