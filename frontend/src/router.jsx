@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import RegisterView from './views/registerView';
 import LoginView from './views/LoginView';
 import Layout from './layouts/Layout';
+import HomePage from './views/Homepage';
 
 export default function Router(){
     return(
@@ -10,6 +11,7 @@ export default function Router(){
             <Route element={<Layout />}>
                 <Route path='/auth/register' element={<RegisterView/>}/>
                 <Route path='/auth/login' element={<LoginView/>}/>
+                <Route path='/' element={<HomePage/>}/>
             </Route>
           </Routes>
         </BrowserRouter>
