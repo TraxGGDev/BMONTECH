@@ -12,7 +12,7 @@ El backend ya cuenta con las funcionalidades principales, y el frontend ya consu
 - 🛢️ MongoDB (Mongoose)
 - 🔐 Dotenv, CORS  
 - 🧱 Estructura modular (rutas, modelos, controladores)
-- 🛡️ *(En desarrollo)*: JWT, Bcrypt, middlewares de autenticación
+- 🛡️ *(En desarrollo)*: Rutas protegidas, carrito
 
 ### 🎨 Frontend
 - ⚛️ React + Vite
@@ -48,38 +48,30 @@ BMONTECH/
 │ ├── tailwind.config.js
 │ └── vite.config.js
 
-yaml
-Copiar
-Editar
-
 ---
 
 ## 🧪 Instalación local
 
 ### 🔙 Backend
-```bash
+```bas
 cd backend
 npm install
-Crea un archivo .env:
 
-ini
-Copiar
-Editar
+
+Crea un archivo .env:
 PORT=5000
 MONGO_URI=tu_conexion_mongo
-Inicia el servidor:
 
-bash
-Copiar
-Editar
+
+Inicia el servidor:
 npm run dev
+
 🔜 Frontend
-bash
-Copiar
-Editar
 cd frontend
 npm install
 npm run dev
+
+
 📌 Estado del proyecto
 Módulo	Estado	Notas
 Backend	✅ Completo	Falta agregar autenticación y proteger rutas
