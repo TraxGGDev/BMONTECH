@@ -1,9 +1,5 @@
 # 🛒 BMONTECH – Proyecto Full Stack eCommerce
 
-![GitHub last commit](https://img.shields.io/github/last-commit/tu-usuario/BMONTECH?color=blue)
-![GitHub repo size](https://img.shields.io/github/repo-size/tu-usuario/BMONTECH)
-![GitHub](https://img.shields.io/github/license/tu-usuario/BMONTECH)
-
 **BMONTECH** es un proyecto personal de tienda en línea desarrollado con tecnologías modernas de frontend y backend.  
 El backend ya cuenta con las funcionalidades principales, y el frontend ya consume la API para mostrar productos.
 
@@ -16,7 +12,7 @@ El backend ya cuenta con las funcionalidades principales, y el frontend ya consu
 - 🛢️ MongoDB (Mongoose)
 - 🔐 Dotenv, CORS  
 - 🧱 Estructura modular (rutas, modelos, controladores)
-- 🛡️ *(En desarrollo)*: JWT, Bcrypt, middlewares de autenticación
+- 🛡️ *(En desarrollo)*: Proteger las rutas, middlewares de autenticación
 
 ### 🎨 Frontend
 - ⚛️ React + Vite
@@ -52,9 +48,6 @@ BMONTECH/
 │ ├── tailwind.config.js
 │ └── vite.config.js
 
-yaml
-Copiar
-Editar
 
 ---
 
@@ -64,32 +57,30 @@ Editar
 ```bash
 cd backend
 npm install
+
+
 Crea un archivo .env:
 
-ini
-Copiar
-Editar
 PORT=5000
 MONGO_URI=tu_conexion_mongo
+
+
 Inicia el servidor:
 
-bash
-Copiar
-Editar
 npm run dev
+
+
 🔜 Frontend
-bash
-Copiar
-Editar
 cd frontend
 npm install
 npm run dev
+
+
 📌 Estado del proyecto
-Módulo	Estado	Notas
 Backend	✅ Completo	Falta agregar autenticación y proteger rutas
+
 Frontend	🛠️ En progreso	Muestra productos desde el backend vía fetch
 
 🧑‍💻 Autor
-Ellie
-📫 GitHub
-📧 tu-email@ejemplo.com
+Oscar Perez
+📧 traxgg17@gmail.com
