@@ -1,61 +1,72 @@
-🛒 BMONTECH – Proyecto Full Stack eCommerce
-BMONTECH es un proyecto personal de tienda en línea desarrollado con tecnologías modernas de frontend y backend.
+# 🛒 BMONTECH – Proyecto Full Stack eCommerce
+
+![GitHub last commit](https://img.shields.io/github/last-commit/tu-usuario/BMONTECH?color=blue)
+![GitHub repo size](https://img.shields.io/github/repo-size/tu-usuario/BMONTECH)
+![GitHub](https://img.shields.io/github/license/tu-usuario/BMONTECH)
+
+**BMONTECH** es un proyecto personal de tienda en línea desarrollado con tecnologías modernas de frontend y backend.  
 El backend ya cuenta con las funcionalidades principales, y el frontend ya consume la API para mostrar productos.
 
-🚀 Tecnologías utilizadas
-🧠 Backend
-⚙️ Node.js + Express
+---
 
-🛢️ MongoDB (Mongoose)
+## 🚀 Tecnologías utilizadas
 
-🔐 Dotenv, CORS
+### 🧠 Backend
+- ⚙️ Node.js + Express
+- 🛢️ MongoDB (Mongoose)
+- 🔐 Dotenv, CORS  
+- 🧱 Estructura modular (rutas, modelos, controladores)
+- 🛡️ *(En desarrollo)*: JWT, Bcrypt, middlewares de autenticación
 
-🧱 Estructura modular (rutas, modelos, controladores)
+### 🎨 Frontend
+- ⚛️ React + Vite
+- 💨 Tailwind CSS
+- 🔗 Fetch API (conexión al backend)
 
-🛡️ (En desarrollo): Rutas protegidas, carrito
+---
 
-🎨 Frontend
-⚛️ React + Vite
+## 📦 Funcionalidades implementadas
 
-💨 Tailwind CSS
-
-🔗 Fetch API (conexión al backend)
-
-📦 Funcionalidades implementadas
-✅ CRUD completo de productos
-✅ Conexión con MongoDB Atlas
-✅ Frontend conectado al endpoint de productos
+✅ CRUD completo de productos  
+✅ Conexión con MongoDB Atlas  
+✅ Frontend conectado al endpoint de productos  
 🛠️ Autenticación y rutas protegidas en desarrollo
 
-📁 Estructura del proyecto
-arduino
-Copiar
-Editar
+---
+
+## 📁 Estructura del proyecto
+
 BMONTECH/
 ├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── config/
-│   └── server.js
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── config/
+│ └── server.js
 ├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── App.jsx
-│   ├── index.html
-│   ├── tailwind.config.js
-│   └── vite.config.js
-🧪 Instalación local
-🔙 Backend
-bash
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ └── App.jsx
+│ ├── index.html
+│ ├── tailwind.config.js
+│ └── vite.config.js
+
+yaml
 Copiar
 Editar
+
+---
+
+## 🧪 Instalación local
+
+### 🔙 Backend
+```bash
 cd backend
 npm install
-Crea un archivo .env con estas variables (ajusta los valores):
+Crea un archivo .env:
 
-env
+ini
 Copiar
 Editar
 PORT=5000
@@ -79,6 +90,6 @@ Backend	✅ Completo	Falta agregar autenticación y proteger rutas
 Frontend	🛠️ En progreso	Muestra productos desde el backend vía fetch
 
 🧑‍💻 Autor
-Oscar Perez
-📫 GitHub: https://github.com/TraxGGDev
-📧 Email: traxgg17@gmail.com
+Ellie
+📫 GitHub
+📧 tu-email@ejemplo.com
