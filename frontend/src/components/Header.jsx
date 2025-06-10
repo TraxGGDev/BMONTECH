@@ -10,10 +10,10 @@ const Header = () => {
     setShowSearchBar(!showSearchBar);
   };
   return (
-    <header className="w-full flex items-center justify-between bg-[#004B49] h-20 px-10 shadow-md">
-      {/* Nombre de la tienda o logo */}
-      <h1 className="text-3xl font-bold text-white">BMONTECH</h1>
-
+   <header className="w-full flex items-center justify-between bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] h-20 px-10 shadow-lg">
+  <h1 className=" cursor-pointer text-4xl font-bold text-cyan-400 hover:text-white transition-colors duration-300" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+  BMONTECH
+</h1>
       {/* Barra de búsqueda */}
        <button
             onClick={toggleSearchBar}
