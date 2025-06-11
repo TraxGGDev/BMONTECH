@@ -68,7 +68,7 @@ export default function FeaturedProducts(){
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Nuestros Productos Destacados</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Productos Destacados</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map(product => (
             // Usa _id para la key, ya que es único
