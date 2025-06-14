@@ -6,6 +6,8 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router />
+    <div className="bg-gray-100 min-h-screen">
+      <Router />
+    </div>
   </StrictMode>,
 )

@@ -2,7 +2,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import RegisterView from './views/registerView';
 import LoginView from './views/LoginView';
 import Layout from './layouts/Layout';
-import HomePage from './views/Homepage';
+import HomePage from './views/HomePage';
+
 
 export default function Router(){
     return(
