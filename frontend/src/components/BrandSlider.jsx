@@ -22,7 +22,7 @@ export default function BrandSlider(){
         <div className="py-4 mb-15">
           {/* Título */}
       <div className="text-center mb-15">
-        <h1 className="text-3xl font-sans-serif text-black-400">Nuestras marcas destacadas</h1>
+        <h1 className="text-3xl font-sans-serif text-black-400">Nuestras marcas aliadas</h1>
         <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-2 rounded"></div>
       </div>
       <Slider
