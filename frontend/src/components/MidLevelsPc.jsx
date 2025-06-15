@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import ProductCard from "./ProductCard"
 
 
-export default function FeaturedProducts(){
+export default function MidLevelsPCs(){
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,7 +44,6 @@ export default function FeaturedProducts(){
     return (
       <section className="py-16 bg-gray-100 text-center">
         <p className="text-xl text-gray-700">Cargando productos...</p>
-        {/* Podrías añadir un spinner de carga aquí */}
       </section>
     );
   }
@@ -60,7 +59,7 @@ export default function FeaturedProducts(){
   if (products.length === 0) {
     return (
       <section className="py-16 bg-gray-100 text-center">
-        <p className="text-xl text-gray-700">No hay productos destacados disponibles en este momento.</p>
+        <p className="text-xl text-gray-700">No hay pc de entrada disponibles.</p>
       </section>
     );
   }
@@ -68,7 +67,7 @@ export default function FeaturedProducts(){
   return (
     <section className="py-16 bg-white shadow-xl mb-10">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-12 text-gray-500">Productos Destacados</h2>
+        <h2 className="text-2xl font-bold text-center mb-12 text-gray-500">PC de gama media</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map(product => (
             // Usa _id para la key, ya que es único

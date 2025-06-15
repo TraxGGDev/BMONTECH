@@ -4,7 +4,7 @@ import {FaShoppingBag ,FaShoppingCart, FaUser, FaSearch} from "react-icons/fa";
 export default function Header(){
   return(
     <>
-    <header className="w-full flex items-center justify-between bg-gray-100  h-20 px-10 shadow-lg">
+    <header className="w-full flex items-center justify-between bg-white  h-20 px-10 shadow-lg">
      <h1 className=" flex items-center w-1/3 cursor-pointer text-4xl font-bebas gap-2 text-black-400">
      <FaShoppingBag className="cursor-pointer" />
   BMONTECH
